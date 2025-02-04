@@ -4,11 +4,11 @@ const output = document.getElementById("output");
 function primeNumberChecker(numberInput) {
   for (let i = 2; i < numberInput; i++) {
     if (numberInput % i === 0) {
-      output.innerHTML = `${numberInput} divided by ${i} so ${numberInput} not prime number.`;
+      output.innerHTML = `${numberInput} divisible by ${i} so ${numberInput} not prime number!`;
       return;
     }
     if (i === numberInput - 1)
-      output.innerHTML = `${numberInput} is prime number.`;
+      output.innerHTML = `${numberInput} is prime number!`;
   }
 }
 function checkBtn() {
@@ -16,6 +16,11 @@ function checkBtn() {
   primeNumberChecker(numberInput);
 }
 check.onclick = checkBtn;
+inputNumber.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    checkBtn();
+  }
+});
 
 // const inputNumber = document.getElementById("input");
 // const check = document.querySelector("#checkButton");
