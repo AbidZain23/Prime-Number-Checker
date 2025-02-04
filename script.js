@@ -4,11 +4,11 @@ const output = document.getElementById("output");
 function primeNumberChecker(numberInput) {
   for (let i = 2; i < numberInput; i++) {
     if (numberInput % i === 0) {
-      output.innerText = `${numberInput} divided by ${i} so ${numberInput} not prime number.`;
+      output.innerHTML = `${numberInput} divided by ${i} so ${numberInput} not prime number.`;
       return;
     }
     if (i === numberInput - 1)
-      output.innerText = `${numberInput} is prime number.`;
+      output.innerHTML = `${numberInput} is prime number.`;
   }
 }
 function checkBtn() {
